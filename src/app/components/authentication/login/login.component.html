@@ -1,0 +1,30 @@
+<div align="center"><img src="assets/img/educativa.png" alt="Avatar" class="avatar"></div>
+<form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+<div class="container">
+      <h1>Ingresar</h1>
+      <p>Por favor rellena en este formulario para Ingresar.</p>
+      <hr>
+<div class="container">
+    <label for="uname"><b>Nombre de Usuario:</b></label>
+    <input type="text" placeholder="Ingrese su nombre de usuario" formControlName="email" name="uname" required>
+
+    <label for="psw"><b>Contraseña:</b></label>
+    <input type="password" placeholder="Ingrese su contraseña" formControlName="password" name="psw" required>
+
+    <button class="btn btn-lg btn-primary" [disabled]="!loginForm.valid" type="submit">Ingresar</button>
+
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Recuerdame
+    </label>
+
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancelar</button> 
+   
+    <span class="psw"> Olvidaste tu <a routerLink="/forgot-password">contraseña?</a>
+    No tienes una cuenta? crea una <a [routerLink]="['/authentication/register']">ahora?</a></span>
+  
+  </div>
+  
+ 

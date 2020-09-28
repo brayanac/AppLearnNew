@@ -1,0 +1,22 @@
+<form #formProduct="ngForm" (ngSubmit)="addCourse(formProduct)">
+    <input type="hidden" name="uid" [(ngModel)]="this.coursesService.selectedCourse.uid" >
+    <div>
+      <mat-form-field >
+        <input matInput placeholder="Nombre del Curso"  name="nameCourse" [(ngModel)]="this.coursesService.selectedCourse.nameCourse">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Horario del Curso" name="timeCourse" [(ngModel)]="this.coursesService.selectedCourse.timeCourse">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Profesor" type="string" name="teacher" [(ngModel)]="this.coursesService.selectedCourse.teacher">
+      </mat-form-field>
+    </div>
+
+    <button *ngIf="dataDialog == null" mat-raised-button type="submit" color="primary">Aceptar</button>
+    <button *ngIf="dataDialog != null" mat-raised-button type="submit" color="primary">Actualizar</button>
+
+  </form>

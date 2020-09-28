@@ -1,0 +1,24 @@
+<form #formProduct="ngForm" (ngSubmit)="addStudent(formProduct)">
+  <input type="hidden" name="uid" [(ngModel)]="this.studentsService.selectedStudent.uid">
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Nombre" name="displayName"
+        [(ngModel)]="this.studentsService.selectedStudent.displayName">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Email" name="email" [(ngModel)]="this.studentsService.selectedStudent.email">
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput placeholder="Telefono" type="number" name="phone"
+        [(ngModel)]="this.studentsService.selectedStudent.phone">
+    </mat-form-field>
+  </div>
+
+  <button *ngIf="dataDialog == null" mat-raised-button type="submit" color="primary">Aceptar</button>
+  <button *ngIf="dataDialog != null" mat-raised-button type="submit" color="primary">Actualizar</button>
+
+</form>

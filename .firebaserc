@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "applearn-project": {
+      "hosting": {
+        "AppLearn": [
+          "applearn-project"
+        ]
+      }
+    }
+  }
+}

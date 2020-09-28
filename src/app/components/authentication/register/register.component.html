@@ -1,0 +1,78 @@
+<div >
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab label="Estudiantes">
+        
+    <form [formGroup]="registerStudentForm"  (ngSubmit)="onRegister()">
+      <div class="container">
+        <h1>Registro</h1>
+        <p>Por favor rellene este formulario para crear una cuenta.</p>
+        <hr >
+    
+        <label for="displayName"><b>Nombre:</b></label>
+        <input type="text" placeholder="Ingrese su nombre completo" name="displayName" formControlName="displayName" id="displayName" required>
+    
+        <label for="idInst"><b>Identificador de instituto:</b></label>
+        <input type="text" placeholder="Ingrese el identificador de su instituto" name="instituteId" formControlName="instituteId" id="instituteId" required>
+    
+        <label for="phone"><b>Teléfono:</b></label>
+        <input type="text" placeholder="Ingrese su teléfono" name="phone" formControlName="phone" id="phone" required>
+    
+        <label for="email"><b>Correo electrónico:</b></label>
+        <input type="text" placeholder="Ingrese su correo electrónico" name="email" formControlName="email" id="email" required>
+    
+        <label for="psw"><b>Contraseña:</b></label>
+        <input type="password" placeholder="Ingrese su contraseña" name="psw" formControlName="password" id="psw" required>
+    
+       <hr>
+    
+        <p>Al crear una cuenta usted acepta nuestros <a href="#">Términos y condiciones de privacidad.</a></p>
+        <button type="submit" class="registerbtn btn-lg">Registro</button>
+      </div>
+    
+      <div class="container signin">
+        <p>Ya tengo una cuenta <a [routerLink]="['/login']">Iniciar</a>.</p>
+      </div>
+    </form>
+      </mat-tab>
+    
+      <mat-tab  label="Administradores"   >
+        
+    <form [formGroup]="registerAdminForm" (ngSubmit)="onRegister()">
+      <div class="container">
+        <h1>Registro</h1>
+        <p>Por favor rellene este formulario para crear una cuenta.</p>
+        <hr>
+        <label for="displayName"><b>Nombre:</b></label>
+        <input type="text" placeholder="Ingrese su nombre completo" name="displayName" formControlName="displayName" id="displayName" required>
+        <label for="idInst"><b>Nombre del instituto:</b></label>
+        <input type="text" placeholder="Ingrese el nombre de su instituto" name="institute" formControlName="institute" id="institute" required>
+        <label for="phone"><b>Teléfono:</b></label>
+        <input type="text" placeholder="Ingrese su teléfono" name="phone" formControlName="phone" id="phone" required>
+        <label for="email"><b>Correo electrónico:</b></label>
+        <input type="text" placeholder="Ingrese su correo electrónico" name="email" formControlName="email" id="email" required>
+        <label for="psw"><b>Contraseña:</b></label>
+        <input type="password" placeholder="Ingrese su contraseña" name="psw" formControlName="password" id="psw" required>
+       <hr>
+        <p>Al crear una cuenta usted acepta nuestros <a href="#">Términos y condiciones de privacidad.</a></p>
+        <button type="submit" (click)="setUserType()" class="registerbtn btn-lg">Registro</button>
+      </div>
+    
+      <div class="container signin">
+        <p>Ya tengo una cuenta <a [routerLink]="['/login']">Iniciar</a>.</p>
+      </div>
+    </form>
+    
+    
+    
+    
+    
+      </mat-tab>
+    
+    </mat-tab-group>
+    
+  </div>
+  
+  
+  
+  
+  

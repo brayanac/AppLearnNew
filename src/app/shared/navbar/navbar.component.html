@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+        <span fxFlex></span>
+    <a mat-button class="nav-link " routerLink="/">AppLearn</a>
+   
+    <li class="nav-item active">
+    <a mat-button class="nav-link " routerLink="authentication/register" *ngIf="!isLogged"  >Registro</a>
+  </li>
+    <li class="nav-item active">
+    <a mat-button class="nav-link " routerLink="authentication/login" *ngIf="!isLogged">Inicio de Sesión</a>
+  </li>
+    <li class="nav-item active">
+    </li>
+      <a mat-button class="nav-link " routerLink="/home" *ngIf="isLogged">Inicio</a>
+    <li class="nav-item active">
+    <a mat-button class="nav-link " routerLink="/students" *ngIf="isLogged">Alumnos</a>
+  </li>
+    <li class="nav-item active">      
+      <a mat-button class="nav-link " routerLink="/courses" *ngIf="isLogged">Cursos</a>
+    </li>
+    <li class="nav-item active"> 
+      <a mat-button class="nav-link " routerLink="/teachers" *ngIf="isLogged">Docentes</a>
+    </li>
+      <li class="nav-item active"> 
+    <a mat-button class="nav-link " routerLink="/forgot-password" *ngIf="isLogged">Ajustes</a>
+  </li>
+    <li class="nav-item active"> 
+    <a mat-button class="nav-link " routerLink="/help" *ngIf="isLogged">Ayuda</a>  
+  </li>
+    <li class="nav-item active"> 
+    <a mat-button class="nav-link toRight" (click)="onLogout()" *ngIf="isLogged">Salir</a>
+  </li>
+    <a></a>
+    
+  </ul> 
+  </div>
+</nav>
